@@ -141,9 +141,9 @@
                         <h1 class="mb-10 text-gold text-oblique">
                             U salonu Lilum Beauty, kozmeticki tretmani su efikasni i drugaciji
                         </h1>
-                        <p class="text-dark custom-big-margin">Kozmetički studio Lilium Beauty prati savremene naučne trendove i inovativne motode u kozmetologiji,
-                            kroz stalna stručna usavršavanja, u želji da svojim klijentima pruži adekvatnu negu, zdravu i
-                            blistavu kožu.</p>
+                        <p class="text-dark custom-big-margin">Kozmetički studio Lilium Beauty prati savremene naučne trendove
+                            i inovativne motode u kozmetologiji, kroz stalna stručna usavršavanja, u želji da svojim klijentima
+                            pruži adekvatnu negu, zdravu i blistavu kožu.</p>
                         <a class="primary-btn" href="#treatments">Pogledajte tretmane</a>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                             usavršavanja, u želji da svojim klijentima pruži adekvatnu negu, zdravu i blistavu kožu.
                         </p> -->
                 </div>
-                <section class="video-area video-area-2 col-lg-6">
+                <section class="video-area col-lg-6 video-area-2">
                     <div class=""></div>
                     <div class="container">
                         <div class="video-content">
@@ -205,9 +205,9 @@
                         <h1 class="mb-10 text-gold text-oblique">
                             Mi nudimo personalizovanu negu vašoj koži
                         </h1>
-                        <p class="text-dark custom-big-margin">Lepa i blistava koža je rezultat svakodnevne nege. Naši klijenti pored stručnih kozmetičkih tretmana
-                            u salonu dobijaju savete i preporuke kako da sprovode režim kućne nege. Najbolje rezultate postižemo
-                            kada radimo zajedno i imamo isti cilj.</p>
+                        <p class="text-dark custom-big-margin">Lepa i blistava koža je rezultat svakodnevne nege. Naši klijenti
+                            pored stručnih kozmetičkih tretmana u salonu dobijaju savete i preporuke kako da sprovode režim
+                            kućne nege. Najbolje rezultate postižemo kada radimo zajedno i imamo isti cilj.</p>
                         <a class="primary-btn" href="#products">Pogledajte naše proizvode</a>
                     </div>
                 </div>
@@ -229,7 +229,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 single-portfolio">
-                    <img class="image img-fluid" src="img/a1.png" alt="">
+                    <img class="image img-fluid" src="img/a1.jpg" alt="">
                     <a href="img/p1.jpg" class="img-pop-up">
                         <div class="middle">
                             <div class="text">
@@ -239,7 +239,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 single-portfolio">
-                    <img class="image img-fluid" src="img/a2.png" alt="">
+                    <img class="image img-fluid" src="img/a2.jpg" alt="">
                     <a href="img/p2.jpg" class="img-pop-up">
                         <div class="middle">
                             <div class="text">
@@ -249,7 +249,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 single-portfolio">
-                    <img class="image img-fluid" src="img/a4.png" alt="">
+                    <img class="image img-fluid" src="img/a3.jpg" alt="">
                     <a href="img/p3.jpg" class="img-pop-up">
                         <div class="middle">
                             <div class="text">
@@ -259,7 +259,7 @@
                     </a>
                 </div>
                 <div class="col-lg-8 single-portfolio">
-                    <img class="image img-fluid" src="img/a1.png" alt="">
+                    <img class="image img-fluid" src="img/a4.jpg" alt="">
                     <a href="img/p4.jpg" class="img-pop-up">
                         <div class="middle">
                             <div class="text">
@@ -269,7 +269,7 @@
                     </a>
                 </div>
                 <div class="col-lg-6 single-portfolio">
-                    <img class="image img-fluid" src="img/a3.png" alt="">
+                    <img class="image img-fluid" src="img/a5.jpg" alt="">
                     <a href="img/p5.jpg" class="img-pop-up">
                         <div class="middle">
                             <div class="text">
@@ -279,7 +279,7 @@
                     </a>
                 </div>
                 <div class="col-lg-6 single-portfolio">
-                    <img class="image img-fluid" src="img/a5.png" alt="">
+                    <img class="image img-fluid" src="img/a6.jpg" alt="">
                     <a href="img/p6.jpg" class="img-pop-up">
                         <div class="middle">
                             <div class="text">
@@ -848,6 +848,39 @@
     <script src="js/parallax.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#mc_embed_signup")
+                .find("form")
+                .ajaxChimp();
+        });
+
+        var url1 = ["../img/slider1-1.jpg", "../img/slider1-2.jpg", "../img/slider1-3.jpg"];
+        var url2 = ["../img/slider2-1.jpg", "../img/slider2-2.jpg", "../img/slider2-3.jpg"];
+        curentImageIndex1 = 0;
+        curentImageIndex2 = 0;
+        setInterval(function () {
+            var p = $(".video-area");
+            var q = $(".video-area-2");
+            p.css(
+                "background",
+                "url(" + url1[curentImageIndex1++] + ") no-repeat center center/cover "
+            );
+            q.css(
+                "background",
+                "url(" + url2[curentImageIndex2++] + ") no-repeat center center/cover "
+            );
+            if (curentImageIndex1 >= url1.length) {
+                curentImageIndex1 = 0;
+            }
+            if (curentImageIndex2 >= url2.length) {
+                curentImageIndex2 = 0;
+            }
+        }, 3500);
+
+
+    </script>
+
 </body>
 
 </html>

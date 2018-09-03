@@ -75,7 +75,7 @@
 }
 
 .video-area-2 {
-  background: url(../img/2.jpg) no-repeat center center/cover !important;
+  background: url(../img/slider2-1.jpg) no-repeat center center/cover;
 }
 
 @media (min-width: 1368px) {
@@ -2401,7 +2401,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .banner-area {
   /* Here goes the header image */
-  background: url(../img/header-bg-2.png) center;
+  background: url(../img/katarina-cover-2.jpg) center;
   background-size: cover;
 }
 
@@ -2485,9 +2485,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .video-area {
+  transition: background 1.5s ease;
   padding: 200px 0 200px 0;
   position: relative;
-  background: url(../img/6.jpg) no-repeat center center/cover;
+  background: url(../img/slider1-1.jpg) no-repeat center center/cover;
 }
 
 .video-area .overlay-bg {
